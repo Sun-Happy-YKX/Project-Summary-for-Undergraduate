@@ -1,0 +1,14 @@
+stages:
+  - test
+
+unittest:
+  image: node:14.5.0
+  tags:
+    - test
+  stage: test
+  script:
+    - npm config set "chromedriver_cdnurl" "https://npm.taobao.org/mirrors/chromedriver"
+    - npm config set sass-binary-site http://npm.taobao.org/mirrors/node-sass
+    - npm config set registry http://registry.npm.taobao.org
+    - npm install
+    - npm run test:unit
