@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView android:layout_width="27dp"
+        android:layout_height="27dp"
+        android:id="@+id/mBtnBack"
+        android:visibility="invisible"
+        android:background="@mipmap/icon_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:id="@+id/mIvLogo"
+        android:background="@mipmap/icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="120dp"/>
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mName"
+        android:text="公司名称"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mIvLogo"
+        android:layout_marginTop="18dp"/>
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mSlogan"
+        android:text="公司宣传语slogan"
+        android:textColor="#B0B3BE"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mName"
+        android:layout_marginTop="5dp"/>
+
+    <EditText style="@style/mw_Style"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/mEtPhone"
+        android:maxLength="11"
+        android:lines="1"
+        android:inputType="text"
+        android:textSize="16sp"
+        android:hint="请输入帐号"
+        android:background="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mSlogan"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDE"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mEtPhone"/>
+
+    <EditText style="@style/mw_Style"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="34dp"
+        android:inputType="textPassword"
+        android:id="@+id/mEtPw"
+        android:maxLength="11"
+        android:lines="1"
+        android:textSize="16sp"
+        android:hint="请输入密码"
+        android:background="@null"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mEtPhone"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DCDCDE"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/mEtPw"/>
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:id="@+id/mBtnLogin"
+        android:text="立即登录"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:background="@drawable/login_btn_bg"
+        android:layout_margin="34dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mEtPw"/>
+
+    <TextView android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mBtnReg"
+        android:text="没有账号？立即注册"
+        android:textColor="#5183F7"
+        android:textSize="12sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mBtnLogin"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

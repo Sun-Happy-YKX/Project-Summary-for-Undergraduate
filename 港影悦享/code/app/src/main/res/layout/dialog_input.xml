@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="247dp"
+    android:layout_height="wrap_content"
+    android:minHeight="148dp"
+    android:background="@drawable/add_folder_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView style="@style/ww_Style"
+        android:text="请输入评论内容"
+        android:id="@+id/mTvTitle"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="16sp"
+        android:layout_marginTop="18dp"/>
+
+    <RelativeLayout style="@style/mw_Style"
+        android:id="@+id/mInput"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="64dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/code_et_bg">
+        <ImageView android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:id="@+id/mBtnClear"
+            android:background="@mipmap/icon_et_clear"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+
+        <EditText android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/mEtName"
+            android:minHeight="32dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:background="@null"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/mBtnClear"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="123dp"
+        android:layout_height="35dp"
+        android:text="取消"
+        android:id="@+id/mBtnCancel"
+        android:textColor="#5183F7"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mInput"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="123dp"
+        android:layout_height="35dp"
+        android:text="确定"
+        android:id="@+id/mBtnSubmit"
+        android:textColor="#5183F7"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mInput"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"/>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#F5F6FA"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/mBtnCancel"/>
+
+    <View android:layout_width="1dp"
+        android:layout_height="35dp"
+        android:background="#F5F6FA"
+        android:layout_marginTop="112dp"
+        app:layout_constraintLeft_toRightOf="@id/mBtnCancel"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
