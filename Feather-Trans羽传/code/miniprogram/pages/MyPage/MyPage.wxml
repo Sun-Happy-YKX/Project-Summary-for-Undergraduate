@@ -1,0 +1,24 @@
+<view class="bodyContainer">
+  <view wx:if="{{logged==false}}" class="loginView">
+    <van-button round type="info" bindtap="getUserProfile">
+      <view style="width:150rpx">授权登录</view>
+    </van-button>
+    <view>
+      <text class="explainText">登录以查看分享历史记录</text>
+    </view>
+  </view>
+
+  <view wx:elif="{{logged==true}}">
+    <view>
+      <image class="background" src="/images/feather_background2.jpg" mode="aspectFill" />
+      <van-image class="UserPicture" round width="150rpx" height="150rpx" src="{{userInfo.avatarUrl}}" />
+      <text class="nickNameText">{{userInfo.nickName}}</text>
+      <text class="tipText">已登录</text>
+    </view>
+    <view class="menuView">
+      <van-button round bind:click="switchToSharedFile" class="myPageButton">
+        <view class="myPageButtonContent">已经分享的问答文件</view>
+      </van-button>
+    </view>
+  </view>
+</view>

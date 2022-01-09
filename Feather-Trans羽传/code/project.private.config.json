@@ -1,0 +1,90 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "打开普通文件分享页面",
+          "pathName": "pages/shareOpenPage/shareOpenPage",
+          "query": "recordID=28ee4e3e60a9c5821b76c78d4bcfdbd7",
+          "scene": 1007
+        },
+        {
+          "name": "选择问题界面",
+          "pathName": "pages/selectQuestionsPage/selectQuestionsPage",
+          "query": "filePath=cloud://env1-uhwk6.656e-env1-uhwk6-1305427049/feather_background.jpg&fileType=image&downloadDateLimit=7&shareName=textname&totalQuestionsNum=5&needQuestionsNum=3",
+          "scene": null
+        },
+        {
+          "name": "问答问题准备界面",
+          "pathName": "pages/uploadQuestionFileReadyPage/uploadQuestionFileReadyPage",
+          "query": "filePath=cloud://env1-uhwk6.656e-env1-uhwk6-1305427049/feather_background.jpg&fileType=image",
+          "scene": null
+        },
+        {
+          "name": "下载问答文件界面",
+          "pathName": "pages/downloadQuestionFile/downloadQuestionFile",
+          "query": "recordID=28ee4e3e60b3540e1e4375787d1e0b52&shareName=问答文件测试",
+          "scene": 1007
+        },
+        {
+          "name": "pages/shareOpenPage/shareOpenPage",
+          "pathName": "pages/shareOpenPage/shareOpenPage",
+          "query": "recordID=cbddf0af6099294f07984f7017eec077",
+          "scene": null
+        },
+        {
+          "name": "个人页面",
+          "pathName": "pages/MyPage/MyPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/UserSharedFile/sharedFile",
+          "pathName": "pages/UserSharedFile/sharedFile",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/selectQuestionsPage/selectQuestionsPage",
+          "pathName": "pages/selectQuestionsPage/selectQuestionsPage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/uploadFinishPage/uploadFinishPage",
+          "pathName": "pages/uploadFinishPage/uploadFinishPage",
+          "query": "recordID=28ee4e3e609e7e7118a478fb67e2c019&shareName=testname&shareType=question",
+          "scene": null
+        },
+        {
+          "name": "pages/downloadQuestionFile/downloadQuestionFile",
+          "pathName": "pages/downloadQuestionFile/downloadQuestionFile",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+/* miniprogram/pages/fileAccessUsers/fileAccessUsers.wxss */
+.bodyContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shareInfoView{
+  width: 640rpx;
+  border-radius: 5px;
+  background-color: #99CCFF;
+  padding:30rpx 25rpx 30rpx 25rpx;
+  margin-top: 30rpx;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.userAvatar{
+ 
+}
+
+.userInfoView{
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+}
+.userNickName{
+  margin-top: 10rpx;
+  margin-left: 20rpx;
+  font-size: 40rpx;
+  font-weight:400 ;
+}
+
+.littleTitle{
+  font-size: 20rpx;
+  color: gray;
+}
+
+.questionNum{
+  font-size: 50rpx;
+  font-weight: 600;
+}
+
+.subButton{
+  border-radius: 25px;
+  position: fixed;
+  bottom: 30%;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

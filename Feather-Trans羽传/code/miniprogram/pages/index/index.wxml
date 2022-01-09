@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<!-- <van-button type="primary" bindtap="tapUploadQuestionFileButton" id="uploadQuestionFileButton">分享问答文件</van-button>
+<van-button type="primary" bindtap="tapUploadButton" id="uploadButton">分享普通文件</van-button> -->
+<image class="background" src="/images/feather_background2.jpg" mode="aspectFill" />
+<view class="bodyContainer">
+	<view class="logoShow" style="height:{{clientHeight-265}}px">
+		<image style="width:100%" src="/images/logo/ft-logo.png" mode="widthFix" />
+		<text class="describText">轻量化文件分享</text>
+	</view>
+	<view class="shadowBox">
+		<van-row>
+			<van-col span="12">
+				<view class="uploadMethodSelectCard" style="margin-left:15px;margin-right:5px" bindtap="tapUploadButton">
+					<image class="uploadMethodPicture" src="/images/icons/normal_file.png"></image>
+					<view class="titleText">上传普通文件</view>
+					<view class="subtitleText">分享图片，文档给好友并在线预览</view>
+				</view>
+			</van-col>
+			<van-col span="12">
+				<view class="uploadMethodSelectCard" style="margin-left:5px;margin-right:15px"
+					bindtap="tapUploadQuestionFileButton">
+					<image class="uploadMethodPicture" src="/images/icons/question_file.png"></image>
+					<view class="titleText">上传问答文件</view>
+					<view class="subtitleText">只有答对一定数量的问题才能获取文件</view>
+				</view>
+			</van-col>
+		</van-row>
+		<view class="tipRow">
+			<text class="tipText">请选择一种文件分享方式</text>
+		</view>
+	</view>
+</view>
+<van-action-sheet show="{{ actionSheetShow }}" actions="{{ actions }}" bind:close="onCloseActionSheet"
+	bind:select="onSelectActionSheet" />
+<van-action-sheet show="{{ questionActionSheetShow }}" actions="{{ actions }}" bind:close="onCloseQuestionActionSheet"
+	bind:select="onSelectActionSheet" />

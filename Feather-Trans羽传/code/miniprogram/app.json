@@ -1,0 +1,60 @@
+{
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-checkbox": "@vant/weapp/checkbox/index",
+    "van-checkbox-group": "@vant/weapp/checkbox-group/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-slider": "@vant/weapp/slider/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-notify": "@vant/weapp/notify/index"
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/upload_ready/upload_ready",
+    "pages/MyPage/MyPage",
+    "pages/uploadFinishPage/uploadFinishPage",
+    "pages/shareOpenPage/shareOpenPage",
+    "pages/uploadQuestionFileReadyPage/uploadQuestionFileReadyPage",
+    "pages/selectQuestionsPage/selectQuestionsPage",
+    "pages/downloadQuestionFile/downloadQuestionFile",
+    "pages/UserSharedFile/sharedFile",
+    "pages/fileAccessUsers/fileAccessUsers"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "分享",
+        "iconPath": "images/icons/trans_normal.png",
+        "selectedIconPath": "images/icons/trans_selected.png"
+      },
+      {
+        "pagePath": "pages/MyPage/MyPage",
+        "text": "我的",
+        "iconPath": "images/icons/my_normal.png",
+        "selectedIconPath": "images/icons/my_selected.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#00F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "FeatherTrans",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

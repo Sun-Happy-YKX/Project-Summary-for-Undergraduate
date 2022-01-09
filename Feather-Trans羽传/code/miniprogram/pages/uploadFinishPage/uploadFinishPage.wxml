@@ -1,0 +1,13 @@
+<view class="bodyContainer">
+  <image style="width:50%;margin-top:50rpx" src="/images/logo/ft-logo.png" mode="widthFix" />
+  <view class="fileNameView">
+    <image class="successLogo" src="/images/icons/successfile.png" />
+    <text class="shareNameText">{{shareName}}</text>
+  </view>
+
+  <text class="explainText">上传完成，快去分享吧！</text>
+  <view class="buttons">
+    <van-button id="firstButton" round type="info" open-type="share">分享给朋友</van-button>
+    <van-button id="secondButton" round type="info" bind:click="createQRCode">生成二维码</van-button>
+  </view>
+</view>

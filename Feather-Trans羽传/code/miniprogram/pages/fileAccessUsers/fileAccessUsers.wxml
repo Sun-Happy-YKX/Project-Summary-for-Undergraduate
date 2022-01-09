@@ -1,0 +1,16 @@
+<!--miniprogram/pages/fileAccessUsers/fileAccessUsers.wxml-->
+<view class="bodyContainer">
+  <view class="shareInfoView" wx:for="{{ accessUsersList }}" wx:key="idx" wx:for-index="idx" wx:for-item="UserItem">
+    <view class="userInfoView">
+      <van-image width="100rpx" height="100rpx" src="{{UserItem.userInfo.avatarUrl}}" />
+      <text class="userNickName">{{UserItem.userInfo.nickName}}</text>
+    </view>
+    <view class="questionNumView">
+      <text class="littleTitle">答对数 / 所有题目</text>
+      <text class="questionNum">{{UserItem.userRightNum}} / {{UserItem.userTotalNum}}</text>
+    </view>
+  </view>
+  <view class="subButton">
+    <van-button round type="info" bind:click="testFunction">继续接受消息</van-button>
+  </view>
+</view>

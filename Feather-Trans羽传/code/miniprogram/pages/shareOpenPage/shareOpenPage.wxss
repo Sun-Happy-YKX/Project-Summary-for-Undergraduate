@@ -1,0 +1,62 @@
+/* miniprogram/pages/shareOpenPage/shareOpenPage.wxss */
+.bodyContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bigTitle{
+  font-size:60rpx;
+  margin-top: 30rpx;
+  font-weight: 800;
+}
+
+.fileInfoContainer{
+  width: 640rpx;
+  border-radius: 25px;
+  background-color: #99CCFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+.fileInfoView{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.fileInfoText{
+  margin-left: 50rpx;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titleText{
+  font-weight: 800;
+  color:#333333;
+}
+
+.submitButton{
+  margin-top: 50rpx;
+}
+
+.previewImage{
+  margin-top: 40rpx;
+  border-radius: 25rpx;
+}
+
+.previewButton{
+  margin-top: 50rpx;
+}
+
+.passwordInput{
+  margin-left: 30rpx;
+}
+
+.buttonView{
+  text-align: center;
+}

@@ -1,0 +1,64 @@
+<!--miniprogram/pages/upload_ready/upload_ready.wxml-->
+<view class="bodyContainer">
+  <view class="fileInfoContainer">
+    <view class="fileInfoView">
+      <van-image wx:if="{{fileType=='image'}}" fit="cover" round="true" width="70" height="70" bindtap="previewImage"
+        src="{{fileSource}}" />
+      <van-image wx:if="{{fileType=='file'}}" fit="cover" width="60" height="60" bindtap="previewdoc"
+        src="/images/icons/preview_doc.png" />
+      <view class="fileInfoText">
+        <view>
+          <text class="titleText">文件大小 :</text>
+          <text> {{fileSize}}MB</text>
+        </view>
+        <view style="margin-top:10px">
+          <text class="titleText">文件类型 :</text>
+          <text> {{fileType}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="nameInputBox">
+      <van-cell-group>
+        <van-field custom-style="border-radius:25px;width:500rpx;" lable="文件名" model:value="{{ shareNameValue }}"
+          input-align="center" maxlength="20" placeholder="请输入分享名称" border="{{ false }}" />
+      </van-cell-group>
+    </view>
+  </view>
+  <view style="margin-top:12px" class="setContentView">
+    <van-checkbox value="{{ showPasswordInput }}" bind:change="setPasswordShow">设置分享密码</van-checkbox>
+    <view wx:if="{{showPasswordInput==true}}" class="passwordInputBox">
+      <view class="passwordHelpBox">
+        <van-cell-group wx:if="{{showPasswordInput==true}}">
+          <van-field custom-style="border-radius:25px;width:300rpx;" lable="密码" model:value="{{ passwordValue }}"
+            placeholder="请输入提取密码" border="{{ false }}" />
+        </van-cell-group>
+      </view>
+    </view>
+  </view>
+  <view class="setContentView">
+    <van-checkbox value="{{ showTimeLimit }}" bind:change="setTimeLimit">设置下载次数</van-checkbox>
+    <view class="setNumInputBox" wx:if="{{showTimeLimit==true}}">
+      <text class="explainText">至少允许下载1次</text>
+      <view style="margin-top:10px">
+        <van-stepper wx:if="{{showTimeLimit==true}}" value="{{ downloadNumLimit }}" bind:change="onChangeNumLimit"
+          step="5" />
+      </view>
+    </view>
+  </view>
+  <view class="setContentView">
+    <van-checkbox value="{{ showDateLimit }}" bind:change="setDateShow">设置下载期限</van-checkbox>
+    <text class="explainText">默认下载期限为7天</text>
+    <view class="setDateInputBox" wx:if="{{showDateLimit==true}}">
+      <view style="margin-top:10px">
+        <van-stepper wx:if="{{showDateLimit==true}}" value="{{ downloadDateLimit }}" bind:change="onChangeDateLimit"
+          step="5" />
+      </view>
+    </view>
+  </view>
+
+  <van-button round type="info" bindtap="doUploadToCloud">
+    <view style="width:150rpx">上传</view>
+  </van-button>
+</view>
+
+<van-notify id="van-notify" />

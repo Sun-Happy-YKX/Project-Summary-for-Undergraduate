@@ -1,0 +1,27 @@
+/* miniprogram/pages/selectQuestionsPage/selectQuestionsPage.wxss */
+.bodyContainer{
+  margin-top: 30rpx;
+  padding: 0 40rpx 20rpx 40rpx;
+}
+
+.questionShowView{
+  padding: 30rpx 20rpx 30rpx 20rpx;
+  margin-top: 30rpx;
+  width: 640rpx;
+  border-radius: 15px;
+  background-color: #99ccffc2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.questionTag{
+  font-weight: 900;
+}
+
+.answersView{
+  margin-top:10rpx
+}
+
+.buttonView{
+  text-align: center;
+  margin-top: 30rpx;
+}

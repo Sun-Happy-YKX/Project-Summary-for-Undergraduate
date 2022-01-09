@@ -1,0 +1,54 @@
+/* miniprogram/pages/uploadFinishPage/uploadFinishPage.wxss */
+.bodyContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fileNameView{
+  width: 80%;
+  border-radius: 25px;
+  background-color:#578fff69;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50rpx;
+  padding-bottom:50rpx;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.successLogo{
+  margin-top: 60rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.shareNameText{
+  margin-top: 40rpx;
+  font-size: 40rpx;
+  font-weight: 800;
+  color: rgb(95, 95, 95);
+}
+
+.explainText{
+  margin-top: 110rpx;
+  font-size: 40rpx;
+  font-weight: 800;
+  color: rgb(63, 63, 63);
+}
+
+.buttons{
+  margin-top: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+#firstButton{
+  margin-right: 20rpx;
+}
+
+#secondButton{
+  margin-left: 20rpx;
+}
+

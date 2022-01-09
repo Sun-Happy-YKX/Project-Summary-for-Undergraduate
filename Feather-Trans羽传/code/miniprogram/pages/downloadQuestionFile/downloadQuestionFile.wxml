@@ -1,0 +1,52 @@
+<!--miniprogram/pages/shareOpenPage/shareOpenPage.wxml-->
+<view class="bodyContainer">
+  <text class="bigTitle">{{shareName}}</text>
+  <view class="fileInfoContainer">
+    <view class="fileInfoView">
+      <van-image wx:if="{{fileType=='image'}}" fit="cover" width="70" height="70" bindtap="previewImage"
+        src="/images/icons/image.png" />
+        <van-image wx:if="{{fileType=='file'}}" fit="cover" width="60" height="60"
+        src="/images/icons/question_file.png" />
+      <view class="fileInfoText">
+        <view>
+          <text class="titleText">文件大小 :</text>
+          <text> {{fileSize}}MB</text>
+        </view>
+        <view style="margin-top:10px">
+          <text class="titleText">文件类型 :</text>
+          <text> {{fileType}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <van-button class="submitButton" round type="primary" bindtap="downloadSharedFile" disabled="{{isButtonForbidden}}">
+    {{buttonText}}
+  </van-button>
+
+  <image  wx:if="{{fileType=='image'}}" class="previewImage" width="100" height="100" src="{{filePath}}" bindtap="previewImage" 
+  mode="aspectFill" />
+
+  <van-image wx:if="{{showPreviewButton==true}}" class="previewButton" fit="cover" width="60" height="60" bindtap="previewdoc"
+        src="/images/icons/preview_doc.png" />
+
+</view>
+
+<van-action-sheet show="{{ actionSheetShow }}" actions="{{ actions }}" bind:close="actionShwwtOnClose"
+  bind:select="actionSheetOnSelect" />
+<van-popup round custom-style="width:80%;padding:50rpx 30rpx 50rpx 30rpx" show="{{ showQuestionPop }}"
+  bind:close="closeQuestionPop" closeable="{{true}}" close-on-click-overlay="{{false}}">
+  <view class="questionShowView" wx:for="{{ questionList }}" wx:key="idx" wx:for-index="idx" wx:for-item="questionItem">
+    <van-tag class="questionTag" mark type="primary">问题{{ idx+1 }}：</van-tag>
+    <van-tag class="questionTag" mark type="primary">{{ questionItem.question }}</van-tag>
+    <van-radio-group value="{{ questionItem.chooseAnswer}}" bind:change="onQuestionChange" data-idx="{{idx}}">
+      <van-radio name="{{ answer_idx+1 }}" wx:for="{{ questionItem.options }}" wx:key="answer_idx"
+        wx:for-index="answer_idx" wx:for-item="answer_name">{{ answer_name }}</van-radio>
+    </van-radio-group>
+  </view>
+  <van-tag mark type="primary" wx:if="{{questionErrorTip}}">{{questionErrorText}}</van-tag>
+  <text>\n</text>
+  <view class="questionSubmitButton" >
+    <van-button round type="info" bind:click="confirmQuestion">确认</van-button>
+  </view>
+</van-popup>

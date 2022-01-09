@@ -1,0 +1,84 @@
+/* miniprogram/pages/upload_ready/upload_ready.wxss */
+.bodyContainer{
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 20rpx;
+  padding-bottom: 20px;
+}
+
+.fileInfoContainer{
+  width: 640rpx;
+  border-radius: 25px;
+  background-color: #99CCFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.fileInfoView{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.fileInfoText{
+  margin-left: 50rpx;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.titleText{
+  font-weight: 800;
+  color:#333333;
+}
+
+.nameInputBox{
+  margin-bottom: 10px;
+  width: 500rpx;
+}
+
+.setContentView{
+  background-color: #F5F5DC;
+  border-radius: 25px;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.explainText{
+  font-size:10px;
+  color: #666666;
+  font-weight: 400;
+  margin-top: 10rpx;
+}
+
+.passwordInputBox{
+  margin-top: 15px;
+  width: 600rpx;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.passwordHelpBox{
+  width: 300rpx;
+}
+
+.setNumInputBox{
+  width: 600rpx;
+  text-align: center;
+  position: relative;
+}
+
+.setDateInputBox{
+  width: 600rpx;
+  text-align: center;
+}
